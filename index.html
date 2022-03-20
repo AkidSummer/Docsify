@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AkidSummer/notes@main/assets/css/vue.css">
+  <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AkidSummer/notes@main/assets/css/katex.min.css"/>数学公式
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AkidSummer/notes@main/assets/css/sweetalert.min.css">-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+</head>
+<body>
+  <div id="app">加载中....</div>
+  <script>
+    window.$docsify = {
+      name: '🌈Milk & File',
+      repo: 'https://github.com/AkidSummer/notes',
+      coverpage: false, //封面
+      onlyCover: true, //仅显示主页
+      loadSidebar: true, //侧边栏
+      autoHeader: true, //页眉
+      auto2top: true, // 
+      //logo: '/images/Milk.svg', //LOGO
+      themeColor: '#a9cdff', //主题颜色
+      notFoundPage: true, //404
+      copyCode: {
+        buttonText : '复制',
+        errorText  : '错误',
+        successText: '复制成功'
+      },
+      routerMode: 'history',
+        loadSidebar: true,
+        subMaxLevel: 4,
+        pagination: {
+          previousText: '上一章节',
+          nextText: '下一章节',
+        },
+    }
+  </script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="https://cdn.jsdelivr.net/gh/AkidSummer/notes@main/assets/js/copy.js"></script> <!--剪切-->
+  <script src="https://cdn.jsdelivr.net/gh/AkidSummer/notes@main/assets/js/ribbon.js"></script> <!--背景-->
+  <script src="https://cdn.jsdelivr.net/gh/AkidSummer/notes@main/assets/js/jquery.js"></script><!--回到顶部-->
+  <script src="https://cdn.jsdelivr.net/gh/AkidSummer/notes@main/assets/js/jquery.goup.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/AkidSummer/notes@main/live2d-widget/autoload.js"></script> <!--live2D-->
+  <script src="https://cdn.jsdelivr.net/gh/AkidSummer/notes@main/assets/js/zoom-image.min.js"></script> <!--图片缩放-->
+  <script src="https://cdn.jsdelivr.net/gh/AkidSummer/notes@main/assets/js/sweetalert.min.js"></script><!-- 复制提醒 -->
+  <!--<script src="https://cdn.jsdelivr.net/gh/AkidSummer/notes@main/assets/js/docsify-katex.js"></script>数学公式
+  <script src="https://cdn.jsdelivr.net/gh/AkidSummer/notes@main/assets/js/emoji.min.js"></script> 表情
+  <script src="https://cdn.jsdelivr.net/gh/AkidSummer/notes@main/assets/js/external-script.min.js"></script> 加载外部脚本
+  <script src="https://cdn.jsdelivr.net/gh/AkidSummer/notes@main/assets/js/docsify-pagination.min.js"></script> 
+  <script async src="https://cdn.jsdelivr.net/gh/AkidSummer/notes@main/assets/js/busuanzi.pure.mini.js"></script>
+  <canvas class="fireworks" style="position: fixed; left: 0; top: 0; z-index: 1; pointer-events: none;" ></canvas> 
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/AkidSummer/notes@main/assets/js/anime.min.js"></script> 
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/AkidSummer/notes@main/assets/js/fireworks.js"></script>-->
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $.goup({
+        trigger: 100,
+        bottomOffset: 320,
+        locationOffset: 32,
+        titleAsText: true
+      });
+    });
+  </script> <!--回到顶部-->
+  <script>
+    document.body.oncopy = function () {
+      swal("复制成功 😽",
+                "转载声明来源🦄",
+                "success"); };
+  </script>
+  <script type="text/javascript"> 
+      window.onload = function(){ 
+      //屏蔽键盘事件 
+          document.onkeydown = function (){ 
+            var e = window.event || arguments[0]; 
+            //F12 
+            if(e.keyCode == 123){ return false; 
+            //Ctrl+Shift+I 
+            }else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)){ 
+              return false; 
+              //Shift+F10 
+            }else if((e.shiftKey) && (e.keyCode == 121)){ 
+              return false; 
+              //Ctrl+U 
+            }else if((e.ctrlKey) && (e.keyCode == 85)){ 
+              return false; 
+            } 
+          }; 
+        //屏蔽鼠标右键 
+        document.oncontextmenu = function (){ 
+          return true; 
+        } 
+      } 
+</script>
+</html>
+<!--subMaxLevel: 2,-->
